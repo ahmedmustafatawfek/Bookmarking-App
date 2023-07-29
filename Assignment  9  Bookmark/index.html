@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.0-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./bookmark.png" />
+    <title>Bookmark</title>
+
+    <script
+      src="https://kit.fontawesome.com/86e8bfc776.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-black text-white">
+    <div class="container py-5">
+      <h1 class="title text-center">Bookmarker</h1>
+
+      <!-- INPUTS NAMES AND URL OF WEBSITES -->
+      <div class="inputs">
+        <h2 class="sub-title text-center">
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+
+        <div class="form">
+          <p class="mt-4">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name
+          </p>
+          <input
+            type="text"
+            class="form-control"
+            id="siteName"
+            oninput="validBookmakName()"
+          />
+          <span id="bookmarkName" class="d-none"></span>
+
+          <p class="mt-4">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL
+          </p>
+          <input
+            type="text"
+            class="form-control"
+            id="siteURL"
+            oninput="validBookmakUrl()"
+          />
+          <span id="bookmarkURL" class="d-none"></span>
+        </div>
+        <div class="submit mt-5 d-flex justify-content-center">
+          <button onclick="addSite()" class="btn text-white">Submit</button>
+        </div>
+      </div>
+
+      <!-- TABLE OF SITE NAMES AND VISIT AND DELETE BUTTONS -->
+      <table class="table text-center w-75 mx-auto text-center w-100 mx-auto">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

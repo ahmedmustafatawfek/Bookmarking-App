@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap");
+
+* {
+  font-family: "PT Sans Caption", sans-serif;
+  scroll-behavior: smooth;
+}
+::selection {
+  background-color: #e94809;
+  color: white;
+}
+
+.container h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container h1::after {
+  content: "";
+  position: absolute;
+  left: 38%;
+  bottom: -50%;
+  z-index: -1;
+  height: 3rem;
+  width: 25%;
+  background-color: #e94809;
+  margin-inline: auto;
+  transition: all 0.2s;
+}
+
+.container h1:hover::after {
+  bottom: -20%;
+}
+
+.inputs {
+  margin-block: 4rem;
+  padding-block: 2rem;
+  border-top: 0.1rem dotted white;
+  border-bottom: 0.1rem dotted white;
+}
+
+.inputs h2 {
+  font-size: 1.5rem;
+  font-family: "Righteous", cursive;
+  background-image: linear-gradient(to right, #e90909, #ffd900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.inputs .form-control:focus {
+  border-color: none;
+  box-shadow: 0 0 0.8rem 0.25rem #e9480998;
+}
+
+.inputs button.btn{
+  background-color: #e94809;
+  padding-inline: 3rem;
+  transition: all .3s ease-in-out;
+}
+
+.inputs button.btn:hover{
+  background-color: #e95009c2;
+}
+
+.table{
+  --bs-table-bg: black;
+  --bs-table-color: white;
+}
+
+.table button.btn a,
+.table button.btn{
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
+}
+.table button.btn:hover{
+  background-color: white;
+  color: black;
+  --bs-btn-hover-border-color:white;
+}
+
+.table button.btn:hover a{
+  color: black;
+}
+
+span{
+  color:#e90909
+}
